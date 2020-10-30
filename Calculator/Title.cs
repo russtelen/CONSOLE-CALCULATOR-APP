@@ -21,7 +21,7 @@ namespace Calculator
         public static void DisplayTitle()
         {
             setName("Russ");
-            Console.WriteLine($"Welcome to {Title.name}' Calculator!");
+            Console.WriteLine($"Welcome to {name}' Calculator!");
             Console.WriteLine("");
         }
     }
