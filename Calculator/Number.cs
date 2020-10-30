@@ -18,7 +18,7 @@ namespace Calculator
         public static void AskUserFirstNumber()
         {
 
-            Console.WriteLine("Enter a number, then hit enter");
+            Console.WriteLine("Enter a number you would like to calculate, then hit enter");
             //Assign chosen number to num1
             num1 = decimal.Parse(Console.ReadLine());
         }
@@ -26,7 +26,7 @@ namespace Calculator
         //Method that asks user for 2nd number
         public static void AskUserSecondNumber()
         {
-            Console.WriteLine("Enter a number, then hit enter");
+            Console.WriteLine("Enter another number you would like to calculate, then hit enter");
             //Assign chosen number to num2
             num2 = decimal.Parse(Console.ReadLine());
         }
