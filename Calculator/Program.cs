@@ -6,31 +6,31 @@ namespace Calculator
     class Program
     {
         //Declare Variables
-        private static decimal num1 = 0.00m;
-        private static decimal num2 = 0.00m;
+        //public static decimal num1 = 0.00m;
+        //public static decimal num2 = 0.00m;
         private static string operatorChosen { get; set; }
+
+        //Method that asks user for 1st number
+        //public static void AskUserFirstNumber()
+        //{
+        //    Console.WriteLine("Enter a number, then hit enter");
+        //    //Assign chosen number to num1
+        //    num1 = decimal.Parse(Console.ReadLine());
+        //}
+
+        ////Method that asks user for 2nd number
+        //public static void AskUserSecondNumber()
+        //{
+        //    Console.WriteLine("Enter a number, then hit enter");
+        //    //Assign chosen number to num2
+        //    num2 = decimal.Parse(Console.ReadLine());
+        //}
 
         //Method to display title
         public static void DisplayTitle()
         {
             Console.WriteLine("Welcome to Russ' Calculator!");
             Console.WriteLine("");
-        }
-
-        //Method that asks user for 1st number
-        public static void AskUserFirstNumber()
-        {
-            Console.WriteLine("Enter a number, then hit enter");
-            //Assign chosen number to num1
-            num1 = decimal.Parse(Console.ReadLine());
-        }
-
-        //Method that asks user for 2nd number
-        public static void AskUserSecondNumber()
-        {
-            Console.WriteLine("Enter a number, then hit enter");
-            //Assign chosen number to num2
-            num2 = decimal.Parse(Console.ReadLine());
         }
 
         //Method that asks user for inputs
@@ -53,23 +53,23 @@ namespace Calculator
         {
             if (operatorChosen.Equals("1"))
             {
-                Console.WriteLine($"You chose to add {num1} and {num2}... Your result is {num1 + num2} ");
+                Console.WriteLine($"You chose to add {Number.num1} and {Number.num2}... Your result is {Number.num1 + Number.num2} ");
             }
             else if (operatorChosen.Equals("2"))
             {
-                Console.WriteLine($"You chose to subtract {num1} and {num2}... Your result is {num1 - num2} ");
+                Console.WriteLine($"You chose to subtract {Number.num1} and {Number.num2}... Your result is {Number.num1 - Number.num2} ");
             }
             else if (operatorChosen.Equals("3"))
             {
-                Console.WriteLine($"You chose to multiply {num1} and {num2}... Your result is {num1 * num2} ");
+                Console.WriteLine($"You chose to multiply {Number.num1} and {Number.num2}... Your result is {Number.num1 * Number.num2} ");
             }
             else if (operatorChosen.Equals("4"))
             {
-                Console.WriteLine($"You chose to divide {num1} and {num2}... Your result is {num1 / num2} ");
+                Console.WriteLine($"You chose to divide {Number.num1} and {Number.num2}... Your result is {Number.num1 / Number.num2} ");
             }
             else if (operatorChosen.Equals("5"))
             {
-                Console.WriteLine($"You chose to get the remainders {num1} and {num2}... Your result is {num1 % num2} ");
+                Console.WriteLine($"You chose to get the remainders {Number.num1} and {Number.num2}... Your result is {Number.num1 % Number.num2} ");
             }
             else if (operatorChosen.Equals("6"))
             {
@@ -90,10 +90,10 @@ namespace Calculator
             DisplayTitle();
 
             //Ask user for first number
-            AskUserFirstNumber();
+            Number.AskUserFirstNumber();
 
             //Ask user for Second number
-            AskUserSecondNumber();
+            Number.AskUserSecondNumber();
 
             //Ask user for operator
             AskUserForOperator();
