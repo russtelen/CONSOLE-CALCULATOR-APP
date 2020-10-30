@@ -6,25 +6,8 @@ namespace Calculator
     class Program
     {
         //Declare Variables
-        //public static decimal num1 = 0.00m;
-        //public static decimal num2 = 0.00m;
+
         private static string operatorChosen { get; set; }
-
-        //Method that asks user for 1st number
-        //public static void AskUserFirstNumber()
-        //{
-        //    Console.WriteLine("Enter a number, then hit enter");
-        //    //Assign chosen number to num1
-        //    num1 = decimal.Parse(Console.ReadLine());
-        //}
-
-        ////Method that asks user for 2nd number
-        //public static void AskUserSecondNumber()
-        //{
-        //    Console.WriteLine("Enter a number, then hit enter");
-        //    //Assign chosen number to num2
-        //    num2 = decimal.Parse(Console.ReadLine());
-        //}
 
         //Method to display title
         public static void DisplayTitle()
