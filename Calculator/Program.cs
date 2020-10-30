@@ -79,21 +79,10 @@ namespace Calculator
             {
                 Console.WriteLine("Invalid Option! Choose a nubmer 1 - 6");
                 AskUserForOperator();
+                DisplayResults();
             }
 
         }
-
-        //public static void AssignOperator(string operatorChosen)
-        //{
-        //    if (operatorChosen.Equals("1") || operatorChosen.Equals("2") || operatorChosen.Equals("3") || operatorChosen.Equals("4") || operatorChosen.Equals("5") || operatorChosen.Equals("6"))
-        //    {
-        //        operatorChosen = Console.ReadLine();
-        //    }
-        //    else 
-        //    {
-        //        AskUserForOperator();
-        //    }
-        //}
 
         static void Main(string[] args)
         {
@@ -109,17 +98,8 @@ namespace Calculator
             //Ask user for operator
             AskUserForOperator();
 
-            if (operatorChosen.Equals(null))
-            {
-                Console.WriteLine("Invalid Option! Choose a nubmer 1 - 6");
-                AskUserForOperator();
-            }
-            else
-            {
-                DisplayResults();
-            }
-
-       
+            //Display Result
+            DisplayResults();
 
             Console.Read();
         }
