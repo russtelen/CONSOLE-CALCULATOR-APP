@@ -18,17 +18,35 @@ namespace Calculator
         public static void AskUserFirstNumber()
         {
 
+  
             Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-            //Assign chosen number to num1
-            num1 = decimal.Parse(Console.ReadLine());
+            while (!decimal.TryParse(Console.ReadLine(), out num1))
+            {
+                Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
+                num1 = decimal.Parse(Console.ReadLine());
+            }
+            
         }
 
         //Method that asks user for 2nd number
         public static void AskUserSecondNumber()
         {
-            Console.WriteLine("Enter another number you would like to calculate, then hit enter");
-            //Assign chosen number to num2
-            num2 = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a number you would like to calculate, then hit enter");
+            if (!decimal.TryParse(Console.ReadLine(), out num2))
+            {
+                Console.WriteLine("Invalid input! Enter another NUMBER you would like to calculate, then hit enter");
+                AskUserFirstNumber();
+
+            }
+            else
+            {
+                //Assign chosen number to num2
+                num2 = decimal.Parse(Console.ReadLine());
+            }
+
+            //Console.WriteLine("Enter another number you would like to calculate, then hit enter");
+            ////Assign chosen number to num2
+            //num2 = decimal.Parse(Console.ReadLine());
         }
 
         public static decimal getNum1()
