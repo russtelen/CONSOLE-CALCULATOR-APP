@@ -24,6 +24,9 @@ namespace Calculator
             //Display Result
             Results.DisplayResults();
 
+            //Ask user if they want to restart
+            Restart.RestartApp();
+
             Console.Read();
         }
     }
