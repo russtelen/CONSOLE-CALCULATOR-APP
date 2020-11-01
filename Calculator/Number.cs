@@ -17,8 +17,7 @@ namespace Calculator
         //Assign 1st number
         public static void assignFirstNumber(string input)
         {
-            bool isValid = Decimal.TryParse(input, out num1);
-
+            bool isValid = Decimal.TryParse(input, out num1);   
             //Logic
             if (!isValid)
             {
@@ -36,7 +35,6 @@ namespace Calculator
         public static void assignSecondNumber(string input)
         {
             bool isValid = Decimal.TryParse(input, out num2);
-
             //Logic
             if (!isValid)
             {
