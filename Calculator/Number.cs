@@ -13,67 +13,58 @@ namespace Calculator
             Number.num1 = num1;
             Number.num2 = num2;
         }
+
         //Method that asks user for 1st number
-        public static void AskUserFirstNumber()
+        public static void AskUserFirstNumber(string input)
         {
-            Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-            if ( ...... )
+            bool isValid = Decimal.TryParse(input, out num1);
+
+            //Logic
+            if (!isValid)
             {
-                num1 = decimal.Parse(Console.ReadLine());
+                Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
+                AskUserFirstNumber(input);
             }
             else
             {
-                Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-                AskUserFirstNumber();
+                num1 = Decimal.Parse(input);    
             }
 
-            //Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-            //if (Decimal.TryParse(Console.ReadLine(), out num1))
-            //{
-            //    //Assign chosen number to num2
-            //    num1 = decimal.Parse(Console.ReadLine());
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Invalid input! Enter another NUMBER you would like to calculate, then hit enter");
-            //    AskUserFirstNumber();
-            //}
-
-            //Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-            //while (!decimal.TryParse(Console.ReadLine(), out num1))
+            //while (!isValid)
             //{
             //    Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-            //    AskUserFirstNumber();
-            //    num1 = decimal.Parse(Console.ReadLine());
+            //    num1 = decimal.Parse(input);
             //}
+
         }
 
 
 
 
         //Method that asks user for 2nd number
-        public static void AskUserSecondNumber()
+        public static void AskUserSecondNumber(string input)
         {
-            //Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-            //if (Decimal.TryParse(Console.ReadLine(), out num1))
-            //{
-            //    //Assign chosen number to num2
-            //    num1 = decimal.Parse(Console.ReadLine());
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Invalid input! Enter another NUMBER you would like to calculate, then hit enter");
-            //}
+            bool isValid = Decimal.TryParse(input, out num2);
 
-            Console.WriteLine("Enter another number you would like to calculate, then hit enter");
-            while (!Decimal.TryParse(Console.ReadLine(), out num2))
+            //Logic
+            if (!isValid)
             {
                 Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-                AskUserSecondNumber();
+                input = "0.00";
+                AskUserSecondNumber(input);
             }
-            num2 = decimal.Parse(Console.ReadLine());
-        }
+            else
+            {
+                num2 = Decimal.Parse(input);
+            }
 
+            //while (!isValid)
+            //{
+            //    Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
+            //    num1 = decimal.Parse(input);
+            //}
+
+        }
         public static decimal getNum1()
         {
             return num1;
