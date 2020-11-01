@@ -18,11 +18,12 @@ namespace Calculator
         {
             Title.name = name;
         }
+
         public static void DisplayTitle()
         {
             setName("Russ");
             Console.WriteLine($"Welcome to {name}' Calculator!");
-            Console.WriteLine("");
+            Console.WriteLine("-------------------------------");
         }
     }
 }

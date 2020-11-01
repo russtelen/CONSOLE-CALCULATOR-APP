@@ -10,13 +10,13 @@ namespace Calculator
             //Title
             Title.DisplayTitle();
 
-            //Ask user for first number
+            //Ask user for first number, then assign
             Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-            Number.AskUserFirstNumber(Console.ReadLine());
+            Number.assignFirstNumber(Console.ReadLine());
 
-            //Ask user for Second number
+            //Ask user for Second number, then assign
             Console.WriteLine("Enter another number you would like to calculate, then hit enter");
-            Number.AskUserSecondNumber(Console.ReadLine());
+            Number.assignSecondNumber(Console.ReadLine());
 
             //Ask user for operator
             Operator.AskUserForOperator();

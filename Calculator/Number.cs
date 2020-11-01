@@ -14,8 +14,8 @@ namespace Calculator
             Number.num2 = num2;
         }
 
-        //Method that asks user for 1st number
-        public static void AskUserFirstNumber(string input)
+        //Assign 1st number
+        public static void assignFirstNumber(string input)
         {
             bool isValid = Decimal.TryParse(input, out num1);
 
@@ -23,26 +23,17 @@ namespace Calculator
             if (!isValid)
             {
                 Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-                AskUserFirstNumber(input);
+                assignFirstNumber(Console.ReadLine());
             }
             else
             {
-                num1 = Decimal.Parse(input);    
+                num1 = Decimal.Parse(input);
             }
-
-            //while (!isValid)
-            //{
-            //    Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-            //    num1 = decimal.Parse(input);
-            //}
-
         }
 
 
-
-
-        //Method that asks user for 2nd number
-        public static void AskUserSecondNumber(string input)
+        //Assign 2nd number
+        public static void assignSecondNumber(string input)
         {
             bool isValid = Decimal.TryParse(input, out num2);
 
@@ -50,26 +41,21 @@ namespace Calculator
             if (!isValid)
             {
                 Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-                input = "0.00";
-                AskUserSecondNumber(input);
+                assignSecondNumber(Console.ReadLine());
             }
             else
             {
                 num2 = Decimal.Parse(input);
             }
-
-            //while (!isValid)
-            //{
-            //    Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-            //    num1 = decimal.Parse(input);
-            //}
-
         }
+
+        //get num1
         public static decimal getNum1()
         {
             return num1;
         }
 
+        //get num2
         public static decimal getNum2()
         {
             return num2;
