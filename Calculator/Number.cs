@@ -30,7 +30,6 @@ namespace Calculator
             }
         }
 
-
         //Assign 2nd number
         public static void assignSecondNumber(string input)
         {
@@ -45,18 +44,6 @@ namespace Calculator
             {
                 num2 = Decimal.Parse(input);
             }
-        }
-
-        //get num1
-        public static decimal getNum1()
-        {
-            return num1;
-        }
-
-        //get num2
-        public static decimal getNum2()
-        {
-            return num2;
         }
     }
 }
