@@ -6,7 +6,7 @@ namespace Calculator
 {
     class Operator
     {
-        public static string operatorChosen { get; set; }
+        public static string OperatorChosen { get; set; }
 
         //Method that asks user for inputs
         public static void AskUserForOperator()
@@ -20,7 +20,7 @@ namespace Calculator
             Console.WriteLine("5. Modulo (Get Remainder)");
             Console.WriteLine("6. Quit Appication");
 
-            operatorChosen = Console.ReadLine();
+            OperatorChosen = Console.ReadLine();
         }
     }
 }
