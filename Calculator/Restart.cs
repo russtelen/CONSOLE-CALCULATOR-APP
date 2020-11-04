@@ -13,7 +13,7 @@ namespace Calculator
 
             string continueApp = Console.ReadLine();
 
-            if (continueApp.Equals("Y") || continueApp.Equals("y"))
+            if (continueApp.ToUpper() == "Y")
             {
                 //Ask user for first number, then assign
                 Console.WriteLine("Enter a number you would like to calculate, then hit enter");

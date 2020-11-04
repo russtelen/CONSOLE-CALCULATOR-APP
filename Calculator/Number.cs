@@ -6,8 +6,8 @@ namespace Calculator
 {
     class Number
     {
-        public static decimal num1 = 0.00m;
-        public static decimal num2 = 0.00m;
+        public static decimal num1;
+        public static decimal num2;
         public Number(decimal num1, decimal num2)
         {
             Number.num1 = num1;

@@ -7,22 +7,17 @@ namespace Calculator
 {
     class Title
     {
-        private static string name;
+        public static string Name { get; private set; }
 
-        public Title(string name)
+        public Title(string Name)
         {
-            Title.name = name;
-        }
-
-        public static void setName(string name) 
-        {
-            Title.name = name;
+            Title.Name = Name;
         }
 
         public static void DisplayTitle()
         {
-            setName("Russ");
-            Console.WriteLine($"Welcome to {name}' Calculator!");
+            Title.Name = "Russ";
+            Console.WriteLine($"Welcome to {Name}' Calculator!");
             Console.WriteLine("-------------------------------");
         }
     }
