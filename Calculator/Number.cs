@@ -15,14 +15,14 @@ namespace Calculator
         }
 
         //Assign 1st number
-        public static void assignFirstNumber(string input)
+        public static void AssignFirstNumber(string input)
         {
             bool isValid = Decimal.TryParse(input, out num1);   
             //Logic
             if (!isValid)
             {
                 Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-                assignFirstNumber(Console.ReadLine());
+                AssignFirstNumber(Console.ReadLine());
             }
             else
             {
@@ -31,14 +31,14 @@ namespace Calculator
         }
 
         //Assign 2nd number
-        public static void assignSecondNumber(string input)
+        public static void AssignSecondNumber(string input)
         {
             bool isValid = Decimal.TryParse(input, out num2);
             //Logic
             if (!isValid)
             {
                 Console.WriteLine("Invalid input! Enter a NUMBER you would like to calculate, then hit enter");
-                assignSecondNumber(Console.ReadLine());
+                AssignSecondNumber(Console.ReadLine());
             }
             else
             {

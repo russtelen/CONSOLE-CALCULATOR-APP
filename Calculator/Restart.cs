@@ -17,11 +17,11 @@ namespace Calculator
             {
                 //Ask user for first number, then assign
                 Console.WriteLine("Enter a number you would like to calculate, then hit enter");
-                Number.assignFirstNumber(Console.ReadLine());
+                Number.AssignFirstNumber(Console.ReadLine());
 
                 //Ask user for Second number, then assign
                 Console.WriteLine("Enter another number you would like to calculate, then hit enter");
-                Number.assignSecondNumber(Console.ReadLine());
+                Number.AssignSecondNumber(Console.ReadLine());
 
                 //Ask user for operator
                 Operator.AskUserForOperator();
